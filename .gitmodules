@@ -7,3 +7,6 @@
 [submodule "challenge-2-token-vendor"]
 	path = challenge-2-token-vendor
 	url = https://github.com/scaffold-eth/scaffold-eth-challenges
+[submodule "challenge-3-token-vendor"]
+	path = challenge-3-token-vendor
+	url = https://github.com/scaffold-eth/scaffold-eth-challenges

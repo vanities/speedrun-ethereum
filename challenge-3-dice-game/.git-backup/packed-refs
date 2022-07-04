@@ -1,0 +1,17 @@
+# pack-refs with: peeled fully-peeled sorted 
+098498849847331a22ff9f13dee6be73851a990d refs/remotes/origin/ZG-Cha0-Simple-NFT
+4b43e1052dd372783999578380cb0535d4ea39b6 refs/remotes/origin/challenge-0-simple-nft
+5e30d862aaee753f5581ac9f4b5592fb42c51ae9 refs/remotes/origin/challenge-1-decentralized-staking
+dd075ff0f93f25276e5c272151db86437ef91f9b refs/remotes/origin/challenge-2-token-vendor
+3fdd6fc03281515bd9070c076536dba4f6c244ac refs/remotes/origin/challenge-3-dice-game
+64689d038c86201721e1cc941d3ccc4a80434ae3 refs/remotes/origin/challenge-3-multi-sig
+7195bde3dcb3de42e19e6dc74ebdf3ae86c03f12 refs/remotes/origin/challenge-4-oracle
+8d45db9fa5a29a0b27b67c064921453debe2c726 refs/remotes/origin/challenge-5-dex
+4b91647512b697f86af92c6791f752a417608ab2 refs/remotes/origin/challenge-6-nft-marketplace
+d0306cd208f9dc503f1ced4e7d5e92aa427975b0 refs/remotes/origin/challenge-7-create-stream
+d485536e1cb46b12dfd218b0990041e3842e0dce refs/remotes/origin/challenge-8-indexer-and-node
+0e0ad3c56756e9ec7d13eeb013b8b013d9a7d316 refs/remotes/origin/challenge-X-transaction-script
+6ec47e84c85850930f0c42acc1641da4be7f3447 refs/remotes/origin/master
+6ec47e84c85850930f0c42acc1641da4be7f3447 refs/remotes/origin/new-dex-challenge-April2022
+eadd5501b2ac44b6e0e5e9cc93937320fefbbd0e refs/remotes/origin/nft-metadata-script
+03948b843511709f0946bff203fdabe080cfff6c refs/tags/testy

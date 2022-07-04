@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+	hooksPath = .husky
+[remote "origin"]
+	url = https://github.com/scaffold-eth/scaffold-eth-challenges.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "challenge-3-dice-game"]
+	remote = origin
+	merge = refs/heads/challenge-3-dice-game

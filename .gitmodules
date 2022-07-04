@@ -1,9 +1,0 @@
-[submodule "challenge-0-simple-nft"]
-	path = challenge-0-simple-nft
-	url = https://github.com/scaffold-eth/scaffold-eth-challenges
-[submodule "challenge-1-decentralized-staking"]
-	path = challenge-1-decentralized-staking
-	url = https://github.com/scaffold-eth/scaffold-eth-challenges
-[submodule "challenge-2-token-vendor"]
-	path = challenge-2-token-vendor
-	url = https://github.com/scaffold-eth/scaffold-eth-challenges

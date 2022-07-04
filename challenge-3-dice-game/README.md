@@ -5,6 +5,7 @@ petite-polish.surge.sh
 deploying "DiceGame" (tx: 0xe2c64cb598d7036eb5b7a2ffe1ba81a7b2e4f2ae94665228d0fb9c93b71f867c)...: deployed at 0x2c38aD5a21F04e6F8D33aA5F23E8918AA090f1f9 with 341525 gas
 deploying "RiggedRoll" (tx: 0x001bac6be6c9df7b69596157481ee08a855e6daf610ab331e8258203396c29d8)...
 : deployed at 0x46b6d0acAeB9C973cbc07DA600c4827a2b74219f with 545095 gas
+https://rinkeby.etherscan.io/address/0x46b6d0acaeb9c973cbc07da600c4827a2b74219f#code
 
 ## 🚩 Challenge 3: 🎲 Dice Game
 

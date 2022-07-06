@@ -1,5 +1,12 @@
 # 🏗 scaffold-eth | 🏰 BuidlGuidl
 
+## Shipped
+reusing "Balloons" at 0xD14b0847DdDFc005b819f33Aa1CbE85C61c964ba
+reusing "DEX" at 0x2D520beEF3Ad2cCDa36201384100d413F0d9dFcc
+Approving DEX (0x2D520beEF3Ad2cCDa36201384100d413F0d9dFcc) to take Balloons from main account...
+squealing-comb.surge.sh
+
+
 ## 🚩 Challenge 5: Minimum Viable Exchange
 
 This challenge will provide a tutorial to help you build/understand a simple decentralized exchange. This readme is an upated version of the [original tutorial](https://medium.com/@austin_48503/%EF%B8%8F-minimum-viable-exchange-d84f30bd0c90). Please read the intro for a background on what we are building!
@@ -35,7 +42,7 @@ Navigate to the Debug Contracts tab and you should see two smart contracts displ
 
 ---
 
-### Checkpoint 2: Reserves 
+### Checkpoint 2: Reserves
 
 We want to create an automatic market where our contract will hold reserves of both ETH and 🎈 Balloons. These reserves will provide liquidity that allows anyone to swap between the assets. Let’s add a couple new variables to `DEX.sol`:
 
@@ -57,16 +64,16 @@ function init(uint256 tokens) public payable returns (uint256) {
 }
 ```
 
-Calling init() will load our contract up with both ETH and 🎈 Balloons. 
+Calling init() will load our contract up with both ETH and 🎈 Balloons.
 
-We can see that the DEX starts empty. We want to be able to call init() to start it off with liquidity, but we don’t have any funds or tokens yet. Add some ETH to your local account using the faucet and then find the `00_deploy_your_contract.js` file. Uncomment the line below and add your address: 
+We can see that the DEX starts empty. We want to be able to call init() to start it off with liquidity, but we don’t have any funds or tokens yet. Add some ETH to your local account using the faucet and then find the `00_deploy_your_contract.js` file. Uncomment the line below and add your address:
 
 ```
   // // paste in your address here to get 10 balloons on deploy:
   // await balloons.transfer("YOUR_ADDRESS","" + (10 * 10 ** 18));
 ```
 
-Run `yarn deploy`. The front end should show you that you have balloon tokens. We can’t just call init() yet because the DEX contract isn’t allowed to transfer tokens from our account. We need to approve() the DEX contract with the Balloons UI. Copy and paste the DEX address and then set the amount to 5000000000000000000 (5 * 10¹⁸). You can confirm this worked using the allowance() function. Now we are ready to call init() on the DEX. We will tell it to take (5 * 10¹⁸) of our tokens and we will also send 0.01 ETH with the transaction. You can see the DEX contract's value update and you can check the DEX token balance using the balanceOf function on the Balloons UI. 
+Run `yarn deploy`. The front end should show you that you have balloon tokens. We can’t just call init() yet because the DEX contract isn’t allowed to transfer tokens from our account. We need to approve() the DEX contract with the Balloons UI. Copy and paste the DEX address and then set the amount to 5000000000000000000 (5 * 10¹⁸). You can confirm this worked using the allowance() function. Now we are ready to call init() on the DEX. We will tell it to take (5 * 10¹⁸) of our tokens and we will also send 0.01 ETH with the transaction. You can see the DEX contract's value update and you can check the DEX token balance using the balanceOf function on the Balloons UI.
 
 This works pretty well, but it will be a lot easier if we just call the init() function as we deploy the contract. In the `00_deploy_your_contract.js` script try uncommenting the init section so our DEX will start with 3 ETH and 3 Balloons of liquidity:
 
@@ -83,7 +90,7 @@ Now when we `yarn deploy --reset` then our contract should be initialized as soo
 
 ### Checkpoint 3: Price
 
-Follow along with the [original tutorial](https://medium.com/@austin_48503/%EF%B8%8F-minimum-viable-exchange-d84f30bd0c90) Price section for an understanding of the DEX's pricing model and for a price function to add to your contract. You may need to update the Solidity syntax (e.g. use + instead of .add, * instead of .mul, etc). Deploy when you are done. 
+Follow along with the [original tutorial](https://medium.com/@austin_48503/%EF%B8%8F-minimum-viable-exchange-d84f30bd0c90) Price section for an understanding of the DEX's pricing model and for a price function to add to your contract. You may need to update the Solidity syntax (e.g. use + instead of .add, * instead of .mul, etc). Deploy when you are done.
 
 ### Checkpoint 4: Trading
 
@@ -110,12 +117,12 @@ function tokenToEth(uint256 tokens) public returns (uint256) {
 
 Each of these functions calculate the resulting amount of output asset using our price function that looks at the ratio of the reserves vs the input asset. We can call tokenToEth and it will take our tokens and send us ETH or we can call ethToToken with some ETH in the transaction and it will send us tokens. Let’s deploy our contract then move over to the frontend. Exchange some ETH for tokens and some tokens for ETH!
 
-### Checkpoint 5: Liquidity 
+### Checkpoint 5: Liquidity
 
 So far, only the init() function controls liquidity. To make this more decentralized, it would be better if anyone could add to the liquidity pool by sending the DEX both ETH and tokens at the correct ratio.
 Let’s create two new functions that let us deposit and withdraw liquidity:
 
-``` 
+```
 function deposit() public payable returns (uint256) {
   uint256 eth_reserve = address(this).balance - msg.value;
   uint256 token_reserve = token.balanceOf(address(this));
@@ -160,7 +167,7 @@ In App.jsx, look at line 460 onwards at the Dex component, and then the Contract
 
  >  🚀 Run `yarn deploy` to deploy to your public network of choice (😅 wherever you can get ⛽️ gas)
 
-🔬 Inspect the block explorer for the network you deployed to... make sure your contract is there.  
+🔬 Inspect the block explorer for the network you deployed to... make sure your contract is there.
 
 👮 Your token contract source needs to be **verified**... (source code publicly available on the block explorer)
 

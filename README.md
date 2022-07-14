@@ -24,3 +24,12 @@ Accepted
 
 Accepted
 🎰 Randomness is tricky on a public deterministic blockchain. The block hash is the result proof-of-work (for now) and some builders use this as a weak form of randomness. In this challenge you will take advantage of a Dice Game contract by predicting the randomness in order to only roll winning dice!
+
+🚩 Challenge 4: ⚖️ Build a DEX
+
+Accepted
+💵 Build an exchange that swaps ETH to tokens and tokens to ETH. 💰 This is possible because the smart contract holds reserves of both assets and has a price function based on the ratio of the reserves. Liquidity providers are issued a token that represents their share of the reserves and fees...
+
+🚩 Challenge 5: 👛 Multisig Wallet
+
+👩‍👩‍👧‍👧 Using a smart contract as a wallet we can secure assets by requiring multiple accounts to "vote" on transactions. The contract will keep track of transactions in an array of structs and owners will confirm or reject each one. Any transaction with enough confirmations can "execute".
